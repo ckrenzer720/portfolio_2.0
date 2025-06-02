@@ -22,37 +22,37 @@ function App() {
       {/* Main content sections */}
       <main>
         <FadeInSection>
-          <section id="home" className="min-h-[80vh]">
+          <section id="home" className="">
             <Hero />
           </section>
         </FadeInSection>
         <SoftSkillsBar />
         <FadeInSection>
-          <section id="about" className="min-h-[70vh]">
+          <section id="about" className="">
             <About />
           </section>
         </FadeInSection>
 
         <FadeInSection>
-          <section id="skills" className="min-h-[60vh]">
+          <section id="skills" className="">
             {/* Skills section content will go here */}
           </section>
         </FadeInSection>
 
         <FadeInSection>
-          <section id="experience" className="min-h-[60vh]">
+          <section id="experience" className="">
             {/* Experience section content will go here */}
           </section>
         </FadeInSection>
 
         <FadeInSection>
-          <section id="projects" className="min-h-[60vh]">
+          <section id="projects" className="">
             {/* Projects section content will go here */}
           </section>
         </FadeInSection>
 
         <FadeInSection>
-          <section id="contact" className="min-h-[60vh]">
+          <section id="contact" className="">
             {/* Contact form will go here */}
           </section>
         </FadeInSection>
