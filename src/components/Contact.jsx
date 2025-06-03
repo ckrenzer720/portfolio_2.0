@@ -65,39 +65,53 @@ function Contact() {
     [debouncedValidate]
   );
 
-  const sendEmail = useCallback(async (evt) => {
-    evt.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      await emailjs.sendForm(
-        "service_nyiplyk",
-        "contact_form",
-        form.current,
-        "oReZPAeV9Y_5xjXCy"
-      );
-      alert("Thank you for reaching out! I'll get back to you soon!");
-      setValues(initialValues);
-      setErrors({});
-    } catch (error) {
-      console.error("Failed to send email:", error);
-      alert(
-        "Sorry, there was an error sending your message. Please try again."
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
-  }, []);
-
   // Memoize form validity check
   const isFormValid = useMemo(() => {
-    return (
-      Object.keys(errors).length === 0 &&
+    const valid = Boolean(
       values.user_name &&
-      values.user_email &&
-      values.message
+        values.user_email &&
+        values.message &&
+        values.message.length >= 5
     );
-  }, [errors, values]);
+    return valid;
+  }, [values]);
+
+  const sendEmail = useCallback(
+    async (evt) => {
+      evt.preventDefault();
+      console.log("Form submission started");
+
+      // Basic validation
+      if (!values.user_name || !values.user_email || !values.message) {
+        console.log("Form validation failed:", { values });
+        return;
+      }
+
+      setIsSubmitting(true);
+      console.log("Attempting to send email with values:", values);
+
+      try {
+        const result = await emailjs.sendForm(
+          "service_nyiplyk",
+          "contact_form",
+          form.current,
+          "oReZPAeV9Y_5xjXCy"
+        );
+        console.log("Email sent successfully:", result);
+        alert("Thank you for reaching out! I'll get back to you soon!");
+        setValues(initialValues);
+        setErrors({});
+      } catch (error) {
+        console.error("Failed to send email:", error);
+        alert(
+          "Sorry, there was an error sending your message. Please try again."
+        );
+      } finally {
+        setIsSubmitting(false);
+      }
+    },
+    [values]
+  );
 
   return (
     <div className="flex justify-center items-center min-h-[60vh] py-8 px-2">
@@ -122,7 +136,7 @@ function Contact() {
             <input
               placeholder="Your Name *"
               id="user_name"
-              name="user_name"
+              name="from_name"
               type="text"
               value={values.user_name}
               onChange={onChange}
@@ -135,7 +149,7 @@ function Contact() {
             <input
               placeholder="Your Email *"
               id="user_email"
-              name="user_email"
+              name="from_email"
               type="email"
               value={values.user_email}
               onChange={onChange}
@@ -146,7 +160,7 @@ function Contact() {
               <p className="text-red-400 text-xs">{errors.user_email}</p>
             )}
             <textarea
-              placeholder="Message *"
+              placeholder="What would you like to say?"
               id="message"
               name="message"
               value={values.message}
@@ -162,7 +176,19 @@ function Contact() {
         <button
           type="submit"
           disabled={!isFormValid || isSubmitting}
-          className="w-full bg-emerald-400 hover:bg-emerald-500 text-white font-bold py-3 rounded-md transition-colors duration-300 text-base tracking-wide disabled:opacity-60"
+          className={`w-full bg-emerald-400 hover:bg-emerald-500 text-white font-bold py-3 rounded-md transition-colors duration-300 text-base tracking-wide ${
+            !isFormValid ? "opacity-60 cursor-not-allowed" : ""
+          }`}
+          onClick={() => {
+            console.log("Button clicked", {
+              isFormValid,
+              isSubmitting,
+              values,
+            });
+            if (!isFormValid) {
+              console.log("Form is not valid:", { values });
+            }
+          }}
         >
           {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
         </button>
