@@ -127,9 +127,8 @@ function Contact() {
               Get In Touch
             </h3>
             <p className="text-white text-base font-normal">
-              Feel free to reach out if you'd like to collaborate or want to
-              have a conversation.
-              <br />I love it when new frineds say hi!
+              Reach out if you'd like to collaborate or want to have a
+              conversation.
             </p>
           </div>
           <div className="flex flex-col gap-4">

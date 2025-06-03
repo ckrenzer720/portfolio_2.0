@@ -26,9 +26,9 @@ const Skills = () => (
       Languages & Tools
     </h2>
     <p className="text-lg md:text-xl text-white font-normal mb-10 max-w-2xl text-center leading-relaxed tracking-wide">
-      I have experience working with these languages and implement best
-      practices to deliver high-quality results. I have also used these skills
-      to develop a strong portfolio of projects.
+      I have experience working with these languages. I implement best practices
+      to deliver high-quality results, using these skills to develop a strong
+      portfolio of projects.
     </p>
     <div className="flex flex-wrap justify-center gap-8 w-full">
       {skills.map((skill) => (
