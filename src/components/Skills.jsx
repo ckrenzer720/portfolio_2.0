@@ -21,11 +21,11 @@ const skills = [
 ];
 
 const Skills = () => (
-  <section className="flex flex-col items-center justify-center max-w-6xl mx-auto px-2 py-12 w-full min-h-[50vh] bg-transparent">
-    <h2 className="text-5xl font-bold text-emerald-400 mb-6 tracking-wide leading-tight text-center">
+  <section className="flex flex-col items-center justify-center max-w-6xl mx-auto px-2 py-6 w-full min-h-[40vh] bg-transparent">
+    <h2 className="text-5xl font-bold text-emerald-400 mb-4 tracking-wide leading-tight text-center">
       Languages & Tools
     </h2>
-    <p className="text-lg md:text-xl text-white font-normal mb-10 max-w-2xl text-center leading-relaxed tracking-wide">
+    <p className="text-lg md:text-xl text-white font-normal mb-6 max-w-2xl text-center leading-relaxed tracking-wide">
       I have experience working with these languages. I implement best practices
       to deliver high-quality results, using these skills to develop a strong
       portfolio of projects.

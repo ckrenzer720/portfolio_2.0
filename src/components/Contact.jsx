@@ -114,21 +114,21 @@ function Contact() {
   );
 
   return (
-    <div className="flex justify-center items-center min-h-[60vh] py-8 px-2">
+    <div className="flex justify-center items-center min-h-[50vh] py-4 px-2">
       <form
         id="my-form"
         ref={form}
         onSubmit={sendEmail}
-        className="w-full max-w-2xl bg-[#12213a] rounded-2xl shadow-lg p-6 md:p-10"
+        className="w-full max-w-6xl bg-[#12213a] rounded-2xl shadow-lg p-4 md:p-8"
       >
-        <div className="mb-8">
-          <div className="bg-[#1a2b48] rounded-xl p-6 mb-6">
+        <div className="mb-6">
+          <div className="bg-[#1a2b48] rounded-xl p-4 mb-4">
             <h3 className="text-3xl font-bold text-emerald-400 mb-2">
               Get In Touch
             </h3>
             <p className="text-white text-base font-normal">
               Reach out if you'd like to collaborate or want to have a
-              conversation.
+              conversation!
             </p>
           </div>
           <div className="flex flex-col gap-4">

@@ -3,14 +3,14 @@ import { motion } from "framer-motion"; // eslint-disable-line
 const About = () => {
   return (
     <section
-      className="flex flex-col items-start justify-center max-w-4xl mx-auto px-2 py-8 w-full min-h-[50vh]"
+      className="flex flex-col items-start justify-center max-w-4xl mx-auto px-2 py-4 w-full min-h-[40vh]"
       id="about"
     >
       <motion.h2
         initial={{ opacity: 0, x: -60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-4xl md:text-5xl font-bold text-emerald-400 mb-4 tracking-wide leading-tight text-center mx-auto"
+        className="text-4xl md:text-5xl font-bold text-emerald-400 mb-3 tracking-wide leading-tight text-center mx-auto"
       >
         About
       </motion.h2>

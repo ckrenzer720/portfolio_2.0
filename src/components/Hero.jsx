@@ -28,15 +28,25 @@ const Hero = () => {
             with seamless UI/UX.
           </p>
           <div className="flex items-center space-x-4 pt-3">
-            <a
+            <motion.a
               href="#contact"
-              className="group flex items-center border-2 border-emerald-500 text-emerald-500 px-6 py-2 rounded-full font-bold hover:bg-emerald-500 hover:text-white transition-all duration-500 ease-in-out text-base md:text-lg tracking-wide bg-transparent hover:rounded-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group flex items-center border-2 border-emerald-500 text-emerald-500 px-6 py-2 font-bold hover:bg-emerald-500 hover:text-white transition-all duration-300 ease-in-out text-base md:text-lg tracking-wide bg-transparent"
             >
               GET IN TOUCH
-              <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
+              <motion.span
+                className="ml-2"
+                animate={{ x: [0, 5, 0] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
                 →
-              </span>
-            </a>
+              </motion.span>
+            </motion.a>
             <div className="flex space-x-2">
               <a
                 href="https://github.com/ckrenzer720"
