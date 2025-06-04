@@ -24,7 +24,7 @@ const Header = () => {
               whileHover={{ scale: 1.1 }}
               className="w-11 h-11 rounded-full bg-emerald-500 flex items-center justify-center text-white font-extrabold text-2xl shadow-md"
             >
-              C
+              CK
             </motion.div>
           </Link>
 

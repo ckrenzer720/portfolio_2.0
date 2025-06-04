@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // eslint-disable-line
+import ConnerResume from "../assets/Conner_Krenzer_Resume.pdf";
 
 const Hero = () => {
   return (
@@ -29,23 +30,14 @@ const Hero = () => {
           </p>
           <div className="flex items-center space-x-4 pt-3">
             <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="group flex items-center border-2 border-emerald-500 text-emerald-500 px-6 py-2 font-bold hover:bg-emerald-500 hover:text-white transition-all duration-300 ease-in-out text-base md:text-lg tracking-wide bg-transparent"
+              href={ConnerResume}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center border border-emerald-500/50 text-emerald-400 px-4 py-1.5 font-medium hover:bg-emerald-500/10 hover:text-emerald-300 transition-all duration-300 ease-in-out text-sm tracking-wide bg-transparent rounded"
             >
-              GET IN TOUCH
-              <motion.span
-                className="ml-2"
-                animate={{ x: [0, 5, 0] }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                →
-              </motion.span>
+              resume
             </motion.a>
             <div className="flex space-x-2">
               <a
