@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 import FadeInSection from "./components/FadeInSection";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Footer from "./components/Footer";
@@ -83,7 +84,7 @@ function App() {
           </FadeInSection>
           <FadeInSection>
             <section id="projects" className="">
-              {/* Projects section content will go here */}
+              <Projects />
             </section>
           </FadeInSection>
           <FadeInSection>
