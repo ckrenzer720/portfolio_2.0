@@ -28,7 +28,6 @@ const projects = [
     title: "Authentication and Testing Project",
     description:
       "Feel free to take a look at this repository on GitHub. This project is a Node.js-based authentication and testing challenge focused on implementing user authentication and API security. It involves: User Authentication to receive a JWT, protected API routes, security implementation using bcryptjs to hash passwords, E2E testing requiremnets, and database management using SQL",
-    image: noPhotoPng,
     techStack: ["Express", "Bcrypt", "SQLite", "Jest"],
     githubLink:
       "https://github.com/ckrenzer720/web-sprint-challenge-authentication-and-testing.git",
