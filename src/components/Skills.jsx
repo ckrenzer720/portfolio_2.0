@@ -84,7 +84,7 @@ const Skills = () => (
               {skill.icon}
             </span>
           </div>
-          <span className="text-white/80 font-medium text-sm md:text-base mt-1 group-hover:text-white transition-colors duration-300">
+          <span className="text-gray-700 dark:text-white/80 font-medium text-sm md:text-base mt-1 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300">
             {skill.name}
           </span>
         </div>

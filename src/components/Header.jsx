@@ -21,7 +21,7 @@ const Header = () => {
           >
             <motion.div
               whileHover={{ scale: 1.1 }}
-              className="w-11 h-11 rounded-full bg-emerald-500 flex items-center justify-center text-white font-extrabold text-2xl shadow-md"
+              className="w-11 h-11 rounded-full bg-emerald-500 flex items-center justify-center text-gray-100 dark:text-white font-extrabold text-2xl shadow-md"
             >
               CK
             </motion.div>
@@ -35,7 +35,7 @@ const Header = () => {
                 to={link.to}
                 smooth={true}
                 duration={500}
-                className="uppercase tracking-wider font-bold text-emerald-100 dark:text-emerald-200 hover:text-emerald-300 dark:hover:text-emerald-300 cursor-pointer transition-colors duration-300 text-sm"
+                className="uppercase tracking-wider font-bold text-gray-100 dark:text-emerald-200 hover:text-emerald-300 dark:hover:text-emerald-300 cursor-pointer transition-colors duration-300 text-sm"
               >
                 {link.name}
               </Link>
@@ -50,7 +50,7 @@ const Header = () => {
               const contactSection = document.getElementById("contact");
               contactSection?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="bg-emerald-500 text-white px-6 py-2 rounded-full font-bold shadow-md hover:bg-emerald-400 transition-colors duration-300 text-sm md:text-base"
+            className="bg-emerald-500 text-gray-100 dark:text-white px-6 py-2 rounded-full font-bold shadow-md hover:bg-emerald-400 transition-colors duration-300 text-sm md:text-base"
           >
             Let's Talk
           </motion.button>

@@ -32,35 +32,34 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section
+      id="projects"
+      className="py-16 sm:py-20 md:py-24 bg-white dark:bg-gray-900"
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           variants={headingVariants}
           initial="initial"
           whileInView="whileInView"
           viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent"
         >
           Projects
         </motion.h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project) => (
             <motion.div
               key={project.id}
               variants={cardVariants}
               initial="initial"
               whileHover="hover"
-              onHoverStart={() => setHoveredId(project.id)}
-              onHoverEnd={() => setHoveredId(null)}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform perspective-1000 border border-emerald-100 dark:border-emerald-900"
+              className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="relative overflow-hidden group">
-                <motion.img
+              <div className="relative group">
+                <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy"
+                  className="w-full h-48 sm:h-56 md:h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-emerald-950/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="flex gap-4">
@@ -68,38 +67,41 @@ const Projects = () => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white hover:text-emerald-400 transition-colors"
+                      className="text-gray-900 dark:text-white hover:text-emerald-400 transition-colors"
                       whileHover={{ scale: 1.2 }}
                     >
-                      <FaGithub size={24} />
+                      <FaGithub size={24} className="sm:w-6 sm:h-6" />
                     </motion.a>
                     {project.liveLink && (
                       <motion.a
                         href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white hover:text-emerald-400 transition-colors"
+                        className="text-gray-900 dark:text-white hover:text-emerald-400 transition-colors"
                         whileHover={{ scale: 1.2 }}
                       >
-                        <FaExternalLinkAlt size={24} />
+                        <FaExternalLinkAlt
+                          size={24}
+                          className="sm:w-6 sm:h-6"
+                        />
                       </motion.a>
                     )}
                   </div>
                 </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 text-sm bg-emerald-50 dark:bg-emerald-900/50 rounded-full text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-800/50 transition-colors"
+                      className="px-2 sm:px-3 py-1 text-xs sm:text-sm bg-emerald-50 dark:bg-emerald-900/50 rounded-full text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-800/50 transition-colors"
                     >
                       {tech}
                     </span>
