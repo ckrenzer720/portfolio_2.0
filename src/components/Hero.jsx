@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion"; // eslint-disable-line
-import ConnerResume from "../assets/Conner_Krenzer_Resume.pdf";
+import ConnerResume from "../assets/Conner_Krenzer_Resume.pdf"; // eslint-disable-line
 
 const Hero = () => {
   return (

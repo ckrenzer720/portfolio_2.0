@@ -1,6 +1,5 @@
 import portfolioPng from "../assets/portfolio.png";
 import calculatorPng from "../assets/calculator.png";
-import noPhotoPng from "../assets/noPhoto.png";
 import pokeDexPng from "../assets/pokedex.png";
 
 const projects = [
